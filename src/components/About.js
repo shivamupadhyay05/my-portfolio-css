@@ -19,7 +19,11 @@ const About = () => (
         />
       </div>
       <div>
-        <h2 className="about-name-gradient">Hi! I'm <span className="pulse">Shivam Upadhyay</span></h2>
+        <h2 className="about-name-gradient">Hi! I'm <span className="pulse">{
+          [...'Shivam Upadhyay'].map((char, i) =>
+            <span key={i} className={char !== ' ' ? 'glow-char' : ''}>{char === ' ' ? '\u00A0' : char}</span>
+          )
+        }</span></h2>
         <p className="about-title">B.Tech CSE @ Bennett University (2027) | Community Facilitator Lead | Content Head | Developer</p>
         <div className="about-socials">
           <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="about-social-icon linkedin" aria-label="LinkedIn">

@@ -9,9 +9,6 @@
   align-items: center;
   gap: 40px;
   max-width: 900px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.1);
   padding: 40px;
 }
 .about-avatar {
@@ -95,14 +92,10 @@
 }
 
 .about-name-gradient {
-  background: linear-gradient(90deg, #00bcd4, #2c5364);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
   font-size: 2rem;
   font-weight: 700;
   animation: nameBounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) 1;
+  color: #fff;
 }
 @keyframes nameBounce {
   0% { transform: scale(0.8) translateY(30px); opacity: 0; }
@@ -181,6 +174,22 @@
   border-radius: 2rem 0 2rem 0;
   z-index: 0;
   pointer-events: none;
+}
+
+.glow-char {
+  position: relative;
+  display: inline-block;
+  text-shadow:
+    0 0 6px #00bcd4,
+    0 0 12px #00bcd4,
+    0 0 18px #2c5364,
+    0 0 24px #2c5364;
+  animation: glowPulse 1.5s infinite alternate;
+  box-shadow: none !important;
+}
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 6px #00bcd4, 0 0 12px #00bcd4, 0 0 18px #2c5364, 0 0 24px #2c5364; }
+  100% { text-shadow: 0 0 12px #00bcd4, 0 0 24px #00bcd4, 0 0 36px #2c5364, 0 0 48px #2c5364; }
 }
 
 @media (max-width: 900px) {
