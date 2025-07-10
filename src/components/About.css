@@ -1,0 +1,198 @@
+.about-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.1);
+  padding: 40px;
+}
+.about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4f8cff;
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.15);
+}
+.about-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #22223b;
+}
+.about-content h2 {
+  margin: 8px 0 16px 0;
+  font-size: 1.3rem;
+  color: #4f8cff;
+}
+.about-content p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+} 
+
+.about-exciting {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.about-bg-blob {
+  position: absolute;
+  left: -60px;
+  top: -60px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at 60% 40%, #00bcd4 0%, #2c5364 100%);
+  opacity: 0.25;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+  animation: blobMove 8s ease-in-out infinite alternate;
+}
+@keyframes blobMove {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.1) translateY(20px); }
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.about-img-wrapper {
+  background: conic-gradient(from 90deg, #00bcd4, #2c5364, #00bcd4 100%);
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img-animated {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0,188,212,0.18);
+  border: 4px solid #fff;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.about-img-animated:hover {
+  box-shadow: 0 0 32px 8px #00bcd4, 0 4px 24px rgba(0,188,212,0.28);
+  transform: scale(1.06) rotate(-2deg);
+}
+
+.about-name-gradient {
+  background: linear-gradient(90deg, #00bcd4, #2c5364);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 700;
+  animation: nameBounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) 1;
+}
+@keyframes nameBounce {
+  0% { transform: scale(0.8) translateY(30px); opacity: 0; }
+  60% { transform: scale(1.1) translateY(-10px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.about-title {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.about-socials {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.about-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.12);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.about-social-icon.linkedin:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 24px 4px #00bcd4;
+  transform: scale(1.12) rotate(-6deg);
+}
+.about-social-icon.github:hover {
+  background: #181717;
+  box-shadow: 0 0 24px 4px #181717;
+  transform: scale(1.12) rotate(6deg);
+}
+
+.about-contact, .about-edu {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+} 
+
+.about-hero-bg {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.about-bg-svg {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 60%;
+  height: 80%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-bg-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  height: 220px;
+  background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+  opacity: 0.10;
+  filter: blur(2px) grayscale(0.2);
+  border-radius: 2rem 0 2rem 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .about-bg-svg {
+    width: 90%;
+    left: 0;
+    top: 20%;
+  }
+  .about-bg-img {
+    width: 180px;
+    height: 120px;
+    right: 0;
+    bottom: 0;
+  }
+} 

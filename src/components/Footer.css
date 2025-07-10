@@ -1,0 +1,201 @@
+.footer-section {
+  background: #22223b;
+  color: #fff;
+  padding: 32px 0 20px 0;
+  text-align: center;
+}
+.footer-links {
+  margin-top: 12px;
+}
+.footer-links a {
+  color: #4f8cff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+} 
+
+.footer-fancy {
+  width: 100%;
+  margin-top: 4rem;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-card {
+  margin: 0 auto;
+  max-width: 1200px;
+  background: linear-gradient(120deg, rgba(32,58,67,0.95) 80%, rgba(0,188,212,0.10) 100%);
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px 0 rgba(0,188,212,0.10), 0 2px 8px rgba(0,0,0,0.18);
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 2.5rem 2rem 2.5rem;
+  animation: footerSlideIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes footerSlideIn {
+  0% { opacity: 0; transform: translateY(60px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.footer-left {
+  flex: 1 1 320px;
+  min-width: 260px;
+}
+.footer-right {
+  flex: 1 1 320px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.footer-name-underline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffe082;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.footer-name-underline::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4, #a084ca);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  animation: underlineGrow 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes underlineGrow {
+  0% { width: 0; opacity: 0; }
+  60% { width: 60%; opacity: 1; }
+  100% { width: 60%; opacity: 1; }
+}
+
+.footer-tagline {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  width: 44px;
+  height: 44px;
+  font-size: 1.6rem;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.12);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+.footer-social.linkedin:hover {
+  background: #00bcd4;
+  color: #fff;
+  box-shadow: 0 0 24px 4px #00bcd4;
+  transform: scale(1.15) rotate(-6deg);
+}
+.footer-social.github:hover {
+  background: #181717;
+  color: #ffe082;
+  box-shadow: 0 0 24px 4px #181717;
+  transform: scale(1.15) rotate(6deg);
+}
+.footer-social.email:hover {
+  background: #ffe082;
+  color: #232323;
+  box-shadow: 0 0 24px 4px #ffe082;
+  transform: scale(1.15) rotate(-3deg);
+}
+
+.footer-contact-msg {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+}
+.footer-email-link {
+  color: #00bcd4;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.footer-email-link:hover {
+  color: #a084ca;
+  text-shadow: 0 0 8px #a084ca;
+}
+
+.footer-contact-details {
+  margin-top: 1.2rem;
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+.footer-contact-details a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.footer-contact-details a:hover {
+  color: #a084ca;
+  text-shadow: 0 0 8px #a084ca;
+}
+.footer-social.phone:hover {
+  background: #00bcd4;
+  color: #fff;
+  box-shadow: 0 0 24px 4px #00bcd4;
+  transform: scale(1.15) rotate(-3deg);
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  .footer-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+  }
+  .footer-right {
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Font Awesome CDN required for icons */ 
