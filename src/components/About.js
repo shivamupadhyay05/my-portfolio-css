@@ -26,7 +26,7 @@ const About = () => (
         }</span></h2>
         <p className="about-title">B.Tech CSE @ Bennett University (2027) | Community Facilitator Lead | Content Head | Developer</p>
         <div className="about-socials">
-          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="about-social-icon linkedin" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/shivam-upadhyay-34666b277/" target="_blank" rel="noopener noreferrer" className="about-social-icon linkedin" aria-label="LinkedIn">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#0077B5"/><path d="M10.67 13.33h2.66v8h-2.66v-8zm1.33-1.33a1.33 1.33 0 1 1 0-2.66 1.33 1.33 0 0 1 0 2.66zm3.33 1.33h2.56v1.09h.04c.36-.68 1.24-1.4 2.56-1.4 2.74 0 3.25 1.8 3.25 4.13v4.18h-2.66v-3.71c0-.89-.02-2.04-1.24-2.04-1.24 0-1.43.97-1.43 1.97v3.78h-2.66v-8z" fill="#fff"/></svg>
           </a>
           <a href="https://github.com/shivamupadhyay05" target="_blank" rel="noopener noreferrer" className="about-social-icon github" aria-label="GitHub">
